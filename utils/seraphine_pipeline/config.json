@@ -1,0 +1,40 @@
+{
+    "mode": "deploy_mcp",
+    "save_json": true,
+    "save_visualizations": true,
+    "generate_grouped_images": true,
+
+    "output_dir": "outputs",
+
+    "yolo_model_path": "models/model_dynamic.onnx",
+    "yolo_conf_threshold": 0.1,
+    "yolo_iou_threshold": 0.1,
+    "yolo_enable_timing": true,
+    "yolo_enable_debug": true,
+
+    "ocr_model_path": "models/ch_PP-OCRv3_det_infer.onnx",
+    "ocr_det_threshold": 0.9,
+    "ocr_max_side_len": 1280,
+    "ocr_enable_timing": true,
+    "ocr_enable_debug": true,
+    "ocr_use_dilation": true, 
+
+    "merger_iou_threshold": 0.05,
+
+    "seraphine_timing": false,
+    "seraphine_enable_debug": false,
+
+    "gemini_enabled": true,
+    "gemini_prompt_path": "utils/seraphine_pipeline/prompt.txt",
+    "gemini_return_images_b64": true,
+    "gemini_max_concurrent": 4,
+
+    "save_gemini_visualization": true,
+    "save_gemini_json": true,
+
+    "save_yolo_viz": true,
+    "save_ocr_viz": true,
+    "save_merged_viz": true,
+    "save_complete_viz": true,
+    "save_seraphine_viz": true
+}

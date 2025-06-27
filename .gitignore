@@ -1,0 +1,81 @@
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.log
+*.sqlite
+.env
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# === MODEL + INFERENCE ===
+*.onnx
+*.pt
+*.bin
+*.engine
+*.tflite
+*.pb
+*.mlmodel
+*.cache
+*.npy
+*.npz
+
+# === LOGS / OUTPUT ===
+output.png
+output.jpeg
+*.out
+*.jpg
+*.png
+*.bmp
+*.gif
+*.svg
+*.pdf
+*.webp
+*.txt
+*.json
+*.csv
+*.tsv
+!config.json
+!prompt.txt
+!preprocessor_prompt.txt
+
+# === TEMP FILES ===
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+*.swo
+*~
+
+# === IDEs / EDITORS ===
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# === TEST ARTIFACTS ===
+test_outputs/
+temp/
+tmp/
+logs/
+debug/
+samples/
+
+# Ollama
+ollama_models/
+ollama_cache/
+
+# Playwright
+playwright/.cache/
+playwright-report/

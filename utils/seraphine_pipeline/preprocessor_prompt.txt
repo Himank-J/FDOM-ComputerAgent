@@ -1,0 +1,91 @@
+# VLM SERAPHINE SUPERGROUP ANALYSIS PROMPT
+
+```
+# Role: Vision-language agent specialized in desktop UI group analysis and cleanup
+# Input: A screenshot of a desktop UI (e.g., PowerPoint, Blender, Notepad) with logical but noisy Supergroup labels (e.g., H4, V15) visually annotated
+# Output: A condensed JSON object with grouped analysis for key visual regions
+```
+
+---
+
+## 🧠 TASK OVERVIEW
+
+You are shown a screenshot from a desktop software UI where **groups of elements** are annotated with group IDs like `H1`, `V5`, `H25`, etc.
+
+Your job is to return a **condensed JSON object** that answers specific questions about the **functionality and priority** of these groups.
+
+**⚠️ Mandatory Rule:** Every group ID present in the screenshot must be accounted for. Do not skip or omit any group.
+
+---
+
+## 🧩 OUTPUT FORMAT
+
+Return a **single JSON object** with these fields:
+
+```json
+{
+  "groups_to_explore": [{"group_id": "...", "group_name": "...", "reason": "..."}, ...],
+  "groups_to_ignore": [{"group_ids": ["...", "..."]}, {"reasoning": "..."}],
+  "groups_causing_navigation": [{"group_id": "...", "group_name": "...", "reason": "..."}, ...],
+  "groups_causing_state_change": [{"group_id": "...", "group_name": "...", "reason": "..."}, ...],
+  "merge_suggestions": [{"merge_ids": "...", " group_name": "...", "reason": "..."}, ...],
+  "splash_screen": {
+    "present": true,
+    "dismissal": {
+      "click_required": true,
+      "safe_click_targets": [
+        { "group_id": "H22", "coordinates": [100, 100] },
+        { "group_id": "H36" },
+        { "group_id": "H45", "coordinates": [100, 100] }  // clicks like H45-(100,100) mean: top-left offset inside H45
+      ]
+    }
+  },
+  "startup_interaction": {
+    "required": true,
+    "description": "User must interact with a menu, splash, or template chooser before editing.",
+    "strategies": [
+      { "group_id": "H4", "changes_screen": true },
+      { "group_id": "H7", "changes_screen": true },
+      { "group_id": "H5", "changes_screen": false }
+    ]
+  },
+  "file_loader_zones": [{"group_id": "...", "group_name": "...", "reason": "..."}, ...],
+  "primary_interaction_zone": {
+    "id": "V2",
+    "status": "Blocked by splash screen",
+    "currently_interactable": false
+  },
+  "folder_navigation_zones": [{"group_id": "...", "group_name": "...", "reason": "..."}, ...],
+  "file_metadata_zones": [{"group_id": "...", "group_name": "...", "reason": "..."}, ...],
+  "modal_overlay_zones": [{"group_id": "...", "group_name": "...", "reason": "..."}, ...],
+  "notes": "These zones often list folder hierarchies, pinned items, modal prompts, or metadata rows and should be skipped or treated with lower priority for functional understanding."
+}
+```
+
+---
+
+## ✅ CATEGORIZATION RULES
+
+* `groups_to_explore`: All areas fundamental for understanding functionality of the application – give 1–2 line reason for each block. MUST BE INTERACTABLE. This data will go to another Program. So if we do not include icons that we have not included here, we will not be able to interact with the application properly! So very IMPORTANT!
+* `groups_to_ignore`: File lists, Historical files, Dyanically changing lists, passive timelines, etc. If we include regions that are just informative and do not contribute to core functionality here, then we will waste a lot of time exploring or clicking them later on. So important to clear clutter. 
+* `groups_causing_navigation`: Groups clicking which will NAVIGATE the current screen to some other screen, including popups, tab management, buttons that maximize, minimize or close apps. These should include those groups that would open OLD files, or pop-ups.
+* `groups_causing_state_change`: Groups that would change the state of text, objects, 3d models, images, etc, but WILL NOT cause current screen to navigate to some other screen
+* `merge_suggestions`: Visually or semantically redundant groups, including overlapping groups that represent SAME thing in their full semantic purpose. Only suggest if you are 200% sure. Grouping unrelated or distance items will cause loss of content inside!
+* `splash_screen.dismissal.safe_click_targets`: Use visible buttons or text zones that dismiss splash **without changing screens**. Include fallback safe coordinates inside the group box like `{ group_id: "H45", coordinates: [100, 100] }` meaning: **click 100x100 from top-left inside H45**.
+* `startup_interaction.interactive_elements`: List clickable items with `"changes_screen"` flag to help separate navigation vs state change
+* `file_loader_zones`: Specific group IDs showing file pickers, recently opened files, etc.
+* `primary_interaction_zone.currently_interactable`: Whether the canvas/input area is available for use immediately
+* `folder_navigation_zones`: Sidebar with pinned folders, system locations, or navigation paths that don’t help in understanding application logic
+* `file_metadata_zones`: Groups that show file timestamps, file paths, sizes, modified info, or file type tags
+* `modal_overlay_zones`: Temporary modal prompts (e.g., Save As, Export Dialogs) that block UI until interacted with
+* One group CAN BE IN MULTIPLE CATEGORIES.
+
+---
+
+## 🎯 GOAL
+
+Output a compact but information-rich JSON object. This will guide intelligent UI parsing by downstream systems.
+
+All visible group IDs must be accounted for. Noise is expected in group labeling — use bounding region, and visual layout to decide purpose. Sometimes lables might be overlapping elements as well due to space constraints. Remember one group can be in multiple categories. **IMPORTANT: DURING YOUR ANALYSIS ALWAYS MATCH THE COLOR OF THE ID WITH THE COLOR OR THE TECTANGULAR BOX HIGHLIGHTING THE GROUP!!!**
+
+Group where possible to reduce repetition, but **do not skip any group**. AND FOCUS ON THE COLOR OF ID BACKGROUND AND RECTANGULAR HIGHLIGHTS! THAT IS YOUR CLUE TO KNOW WHICH ID REFERS TO WHICH RECANGLE AND CONTENTS INSIDE!
