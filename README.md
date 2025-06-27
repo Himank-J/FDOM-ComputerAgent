@@ -7,11 +7,11 @@ The functional DOM (fDOM) pipeline is a modular system that automatically discov
 Functional DOM (fDOM) is an emergent paradigm for automated, machine-readable mapping of GUI applications. Using advanced perception and automation, our pipeline generates an fDOM JSON artifact that enumerates all visible UI elements, their properties, and initial relations—enabling both analysis and automation. 
 
 ## Exploration Phase
-
+[Watch how Computer Agent works in Exploration Phase](https://drive.google.com/file/d/1rcYJeS_GEPTs0XPT526U-W6WV2CPVH6A/view?usp=sharing)
 
 ## FDOM For Notes Application
 
-[fdom.json]()
+[fdom.json](!apps/notes/fdom.json)
 ```json
 {
   "app_name": "notes",
@@ -118,7 +118,7 @@ Functional DOM (fDOM) is an emergent paradigm for automated, machine-readable ma
 }
 ```
 
-Metadata
+[metadata.json](!https://github.com/Himank-J/FDOM-ComputerAgent/blob/main/apps/notes/metadata.json)
 ```
 {
   "app_name": "notes",
@@ -134,9 +134,19 @@ Metadata
 }
 
 ```
+
 ## Screenshots
+
+[**S001**](!apps/notes/screenshots/S001.png)
 
 ![S001](https://github.com/user-attachments/assets/86144769-ba97-4488-8dea-93e6047ce249)
 
+[**Diff**](!apps/notes/screenshots/diffs/root_to_processing_via_root__H3_1.png)
+
 <img width="1425" alt="image" src="https://github.com/user-attachments/assets/45963ecb-1e07-4a8c-adff-bd32cee2a624" />
+
+## Logs
+
+<img width="716" alt="image" src="https://github.com/user-attachments/assets/7d1986da-2226-48fe-a2bc-591787cf122e" />
+
 
