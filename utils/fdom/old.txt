@@ -1,0 +1,59 @@
+import os
+import cv2
+import numpy as np
+
+def extract_full_difference_region(image_path1, image_path2, output_path=None, debug=False):
+    # Load both images
+    img1 = cv2.imread(image_path1)
+    img2 = cv2.imread(image_path2)
+
+    # Match dimensions if needed
+    if img1.shape != img2.shape:
+        h = min(img1.shape[0], img2.shape[0])
+        w = min(img1.shape[1], img2.shape[1])
+        img1 = cv2.resize(img1, (w, h))
+        img2 = cv2.resize(img2, (w, h))
+        if debug: print(f"⚠️ Resized both images to ({w}, {h})")
+
+    # Convert to grayscale and compute absolute difference
+    gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
+    gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+    diff = cv2.absdiff(gray1, gray2)
+
+    # Threshold and dilate
+    _, thresh = cv2.threshold(diff, 15, 255, cv2.THRESH_BINARY)
+    dilated = cv2.dilate(thresh, np.ones((5, 5), np.uint8), iterations=2)
+
+    # Find contours
+    contours, _ = cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    boxes = [cv2.boundingRect(cnt) for cnt in contours if cv2.contourArea(cnt) > 500]
+
+    if not boxes:
+        print("ℹ️ No significant visual differences found.")
+        return None
+
+    # Compute bounding box of all diffs
+    x_min = min(x for x, y, w, h in boxes)
+    y_min = min(y for x, y, w, h in boxes)
+    x_max = max(x + w for x, y, w, h in boxes)
+    y_max = max(y + h for x, y, w, h in boxes)
+
+    # Extract the unified changed region
+    crop = img2[y_min:y_max, x_min:x_max]
+
+    # Save output
+    if output_path is None:
+        base = os.path.splitext(image_path2)[0]
+        output_path = f"{base}_popup_crop.png"
+
+    cv2.imwrite(output_path, crop)
+    print(f"✅ Saved popup/menu region: {output_path}")
+    return output_path
+
+
+if __name__ == "__main__":
+    # You can change these to your actual file names
+    before_image = "1.png"
+    after_image = "2.png"
+
+    extract_full_difference_region(before_image, after_image)

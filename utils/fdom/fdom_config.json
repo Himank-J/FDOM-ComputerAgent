@@ -1,0 +1,306 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "framework_version": "fDOM_v2.0_modular",
+    "created_date": "2025-01-20",
+    "description": "Complete configuration for modular fDOM Framework v2.0"
+  },
+
+  "exploration": {
+    "max_states_per_session": 500,
+    "click_timeout_seconds": 2.0,
+    "state_change_threshold": 0.05,
+    "exploration_timeout_minutes": 30,
+    "element_interaction_delay": 0.3,
+    "max_retry_attempts": 3,
+    "exploration_strategy": "depth_first",
+    "auto_backtrack_on_completion": true,
+    "mark_non_interactive_elements": true,
+    "track_circular_references": true,
+    "follow_node_to_completion": true
+  },
+
+  "graph_traversal": {
+    "algorithm": "shortest_path",
+    "max_path_length": 20,
+    "enable_cycle_detection": true,
+    "backtrack_on_dead_end": true,
+    "prefer_breadth_first": false,
+    "path_optimization_enabled": true,
+    "validate_path_before_execution": true
+  },
+
+  "node_status_tracking": {
+    "track_visit_count": true,
+    "track_interaction_history": true,
+    "mark_completed_nodes": true,
+    "enable_node_metadata": true,
+    "status_update_interval": 1.0,
+    "persistent_status_storage": true,
+    "auto_mark_dead_ends": true
+  },
+
+  "graph_operations": {
+    "use_networkx_algorithms": true,
+    "enable_path_optimization": true,
+    "validate_graph_integrity": true,
+    "detect_unreachable_states": true,
+    "find_navigation_cycles": true,
+    "graph_serialization_format": "node_link_data",
+    "enable_graph_metrics": true
+  },
+
+  "navigation": {
+    "enable_smart_close_detection": true,
+    "close_button_patterns": [
+      "close", "cancel", "x", "exit", "done", "ok", "dismiss", 
+      "back", "return", "previous", "escape", "quit"
+    ],
+    "navigation_retry_attempts": 3,
+    "navigation_timeout_seconds": 10.0,
+    "path_planning_algorithm": "shortest_path",
+    "enable_root_return": true,
+    "breadcrumb_tracking": true,
+    "fallback_navigation_enabled": true
+  },
+
+  "interaction": {
+    "click_patterns": {
+      "enable_proven_patterns": true,
+      "use_centroid_clicking": true,
+      "centroid_positions": ["center", "top_center", "bottom_center"],
+      "click_retry_delay_seconds": [1.0, 2.0, 3.0],
+      "max_click_retries": 3
+    },
+    "state_change_detection": {
+      "enable_forward_detection": true,
+      "enable_backward_detection": true,
+      "screenshot_comparison_threshold": 0.1,
+      "change_significance_threshold": 0.02,
+      "ignore_minor_changes": true
+    },
+    "smart_diff_comparison": {
+      "enable_element_filtering": true,
+      "ignore_existing_elements": true,
+      "merge_adjacent_regions": true,
+      "noise_reduction_enabled": true,
+      "minimum_change_area_pixels": 100
+    },
+    "close_attempt_methods": ["same_click", "escape_key", "click_outside"],
+    "window_focus_delay": 2.5,
+    "launch_timeout_seconds": 15,
+    "element_click_retry_count": 3
+  },
+
+  "folder_management": {
+    "enable_app_specific_folders": true,
+    "folder_structure": {
+      "screenshots": "screenshots",
+      "crops": "crops", 
+      "diffs": "diffs",
+      "templates": "templates",
+      "backups": "backups",
+      "temp": "temp"
+    },
+    "cleanup_settings": {
+      "auto_cleanup_temp_files": true,
+      "temp_file_max_age_hours": 24,
+      "archive_old_files_days": 30,
+      "max_backup_files": 50
+    }
+  },
+
+  "screenshot_management": {
+    "permanent_screenshots": {
+      "major_state_backups": true,
+      "root_state_backup": true,
+      "exploration_milestones": true
+    },
+    "temporary_screenshots": {
+      "validation_screenshots": true,
+      "diff_comparison_screenshots": true,
+      "interaction_verification": true
+    },
+    "cleanup_strategy": {
+      "preserve_permanent": true,
+      "cleanup_temp_on_success": true,
+      "cleanup_temp_on_error": false,
+      "cleanup_after_processing": true
+    }
+  },
+
+  "logging": {
+    "enable_rich_console": true,
+    "log_levels": {
+      "core": "INFO",
+      "navigation": "INFO", 
+      "interaction": "INFO",
+      "management": "INFO",
+      "pipeline": "INFO"
+    },
+    "log_to_file": true,
+    "log_file_path": "logs/fdom_exploration.log",
+    "enable_component_specific_logs": true,
+    "verbose_mode_available": true
+  },
+
+  "pipeline_control": {
+    "enable_stop_resume": true,
+    "auto_resume_on_start": true,
+    "save_progress_interval_seconds": 30,
+    "enable_user_element_selection": true,
+    "batch_processing": {
+      "enabled": true,
+      "batch_size": 5,
+      "parallel_processing": false
+    },
+    "error_handling": {
+      "continue_on_error": true,
+      "max_consecutive_errors": 5,
+      "error_recovery_attempts": 3
+    }
+  },
+
+  "fdom_format": {
+    "use_networkx_native": true,
+    "element_properties": {
+      "required_fields": [
+        "id", "state", "bbox", "crop_path", "g_icon_name", 
+        "g_brief", "status", "interactivity"
+      ],
+      "enable_dynamic_properties": true,
+      "auto_add_seraphine_properties": true,
+      "property_validation": true
+    },
+    "serialization": {
+      "format": "node_link_data",
+      "include_metadata": true,
+      "compress_large_graphs": false,
+      "backup_before_save": true
+    },
+    "source_of_truth": {
+      "always_reload_from_file": true,
+      "immediate_save_after_changes": true,
+      "validate_before_save": true,
+      "create_change_log": true
+    }
+  },
+
+  "capture": {
+    "screenshot_format": "png",
+    "screenshot_quality": 95,
+    "capture_full_screen": false,
+    "capture_app_window_only": true,
+    "screen_selection_prompt": false,
+    "default_screen": 1,
+    "enable_crop_generation": true,
+    "crop_padding_pixels": 5
+  },
+
+  "storage": {
+    "base_directory": "apps",
+    "app_specific_structure": true,
+    "screenshots_subdir": "screenshots",
+    "crops_subdir": "crops",
+    "diffs_subdir": "screenshots/diffs",
+    "templates_subdir": "templates",
+    "backups_subdir": "backups",
+    "logs_subdir": "logs",
+    "auto_cleanup_old_runs": false,
+    "max_stored_runs_per_app": 10,
+    "enable_compression": false
+  },
+
+  "seraphine": {
+    "mode": "deploy_mcp",
+    "confidence_threshold": 0.1,
+    "enable_grouping": true,
+    "save_debug_output": false,
+    "enable_dynamic_properties": true,
+    "property_detection_enabled": true,
+    "auto_update_schema": true
+  },
+
+  "debug": {
+    "verbose_logging": true,
+    "save_intermediate_screenshots": true,
+    "rich_console_output": true,
+    "pause_between_interactions": false,
+    "enable_debug_mode": false,
+    "save_debug_artifacts": false,
+    "debug_output_directory": "debug"
+  },
+
+  "visual_comparison": {
+    "enable_visual_differ": true,
+    "diff_threshold": 0.1,
+    "enable_region_analysis": true,
+    "ignore_timestamp_changes": true,
+    "enable_smart_filtering": true,
+    "comparison_timeout_seconds": 5.0
+  },
+
+  "performance": {
+    "enable_parallel_processing": true,
+    "max_concurrent_operations": 3,
+    "operation_timeout_seconds": 30.0,
+    "memory_optimization": true,
+    "enable_caching": true,
+    "cache_size_limit_mb": 500
+  },
+
+  "migration": {
+    "auto_migrate_old_format": true,
+    "backup_before_migration": true,
+    "migration_log_enabled": true,
+    "validate_after_migration": true
+  },
+
+  "testing": {
+    "enable_test_mode": false,
+    "mock_interactions": false,
+    "test_data_directory": "test_data",
+    "enable_integration_tests": true
+  },
+
+  "user_interface": {
+    "enable_rich_tables": true,
+    "enable_progress_bars": true,
+    "enable_interactive_selection": true,
+    "auto_confirm_actions": false,
+    "display_exploration_progress": true
+  },
+
+  "template_files": {
+    "enabled": true,
+    "base_directory": "utils/fdom/template_files",
+    "auto_load_on_launch": true,
+    "app_mappings": {
+      "POWERPNT.EXE": {
+        "template_file": "sample.pptx",
+        "file_type": "PowerPoint Presentation",
+        "description": "PowerPoint template with sample content"
+      },
+      "WINWORD.EXE": {
+        "template_file": "sample.docx", 
+        "file_type": "Word Document",
+        "description": "Word template with sample content"
+      },
+      "EXCEL.EXE": {
+        "template_file": "sample.xlsx",
+        "file_type": "Excel Workbook", 
+        "description": "Excel template with sample content"
+      },
+      "BLENDER.EXE": {
+        "template_file": "sample.blend",
+        "file_type": "Blender Project",
+        "description": "Blender template with sample scene"
+      }
+    },
+    "fallback_behavior": {
+      "create_empty_file": false,
+      "launch_without_file": true,
+      "show_warning": true
+    }
+  }
+}

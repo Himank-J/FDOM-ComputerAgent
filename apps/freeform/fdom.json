@@ -1,0 +1,641 @@
+{
+  "app_name": "freeform",
+  "loaded": false,
+  "creation_timestamp": "2025-06-25T22:01:46.776970",
+  "navigation_tree": {},
+  "states": {
+    "root": {
+      "id": "root",
+      "parent": null,
+      "trigger_node": null,
+      "trigger_element": "initial_state",
+      "breadcrumb": "root",
+      "image": "/Users/himank.jain/Downloads/S14B/apps/freeform/screenshots/S001.png",
+      "creation_timestamp": "2025-06-25T22:02:04.824367",
+      "analysis_time": 0,
+      "total_elements": 19,
+      "nodes": {
+        "H0_1": {
+          "bbox": [
+            27,
+            24,
+            95,
+            83
+          ],
+          "g_icon_name": "Folder Icon",
+          "g_brief": "Represents the boards",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H0",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H1_1": {
+          "bbox": [
+            28,
+            440,
+            355,
+            502
+          ],
+          "g_icon_name": "Recently Deleted",
+          "g_brief": "Opens the recently deleted menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H1",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H2_1": {
+          "bbox": [
+            31,
+            108,
+            119,
+            141
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H2",
+          "status": "pending"
+        },
+        "H3_1": {
+          "bbox": [
+            98,
+            161,
+            227,
+            200
+          ],
+          "g_icon_name": "All Boards",
+          "g_brief": "Opens the all boards menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H3",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H4_1": {
+          "bbox": [
+            411,
+            161,
+            451,
+            205
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H4",
+          "status": "pending"
+        },
+        "H5_1": {
+          "bbox": [
+            418,
+            240,
+            441,
+            268
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H5",
+          "status": "pending"
+        },
+        "H6_1": {
+          "bbox": [
+            418,
+            309,
+            448,
+            343
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H6",
+          "status": "pending"
+        },
+        "H7_1": {
+          "bbox": [
+            418,
+            381,
+            448,
+            415
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H7",
+          "status": "pending"
+        },
+        "H8_1": {
+          "bbox": [
+            418,
+            453,
+            446,
+            487
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H8",
+          "status": "pending"
+        },
+        "H9_1": {
+          "bbox": [
+            571,
+            120,
+            875,
+            174
+          ],
+          "g_icon_name": "All Boards",
+          "g_brief": "Opens the all boards menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H9",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H10_1": {
+          "bbox": [
+            1576,
+            955,
+            1787,
+            1000
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H10",
+          "status": "pending"
+        },
+        "H11_1": {
+          "bbox": [
+            1958,
+            18,
+            2037,
+            86
+          ],
+          "g_icon_name": "Pencil inside a square",
+          "g_brief": "Create New",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H11",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H11_2": {
+          "bbox": [
+            2043,
+            21,
+            2111,
+            84
+          ],
+          "g_icon_name": "Grid Icon",
+          "g_brief": "Change view to Grid View",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H11",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H11_3": {
+          "bbox": [
+            2113,
+            22,
+            2191,
+            82
+          ],
+          "g_icon_name": "List Icon",
+          "g_brief": "Change view to List View",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H11",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "V0_1": {
+          "bbox": [
+            19,
+            218,
+            466,
+            291
+          ],
+          "g_icon_name": "Recents",
+          "g_brief": "Opens the Recents menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "V0",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "V0_2": {
+          "bbox": [
+            19,
+            288,
+            465,
+            365
+          ],
+          "g_icon_name": "Shared",
+          "g_brief": "Opens the Shared menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "V0",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "V0_3": {
+          "bbox": [
+            25,
+            364,
+            463,
+            437
+          ],
+          "g_icon_name": "Favourites",
+          "g_brief": "Opens the Favourites menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "V0",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "HL0_1": {
+          "bbox": [
+            2199,
+            24,
+            2859,
+            82
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "HL0",
+          "status": "pending"
+        },
+        "HL1_1": {
+          "bbox": [
+            1314,
+            976,
+            2393,
+            1215
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "HL1",
+          "status": "pending"
+        }
+      }
+    },
+    "root_favourites": {
+      "id": "root_favourites",
+      "parent": "root",
+      "trigger_node": "root::V0_3",
+      "trigger_element": "Favourites",
+      "breadcrumb": "root>favourites",
+      "image": "/Users/himank.jain/Downloads/S14B/apps/freeform/screenshots/diffs/root_to_processing_via_root__V0_3.png",
+      "creation_timestamp": "2025-06-25T22:23:51.445638",
+      "analysis_time": 12.380881071090698,
+      "total_elements": 7,
+      "nodes": {
+        "H0_1": {
+          "bbox": [
+            2093,
+            660,
+            2175,
+            727
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "explore": false,
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H0",
+          "interactivity": {
+            "click_result": null,
+            "type": "unknown"
+          },
+          "status": "pending",
+          "crop_path": "crops/Favourites/H0_1_None_unanalyzed_root_favourites.png"
+        },
+        "H1_1": {
+          "bbox": [
+            2093,
+            782,
+            2231,
+            825
+          ],
+          "g_icon_name": "Boards",
+          "g_brief": "Navigates to the boards view or section",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "explore": true,
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H1",
+          "interactivity": {
+            "click_result": null,
+            "type": "unknown"
+          },
+          "status": "pending",
+          "crop_path": "crops/Favourites/H1_1_None_Boards_root_favourites.png",
+          "autocaptioning": "done"
+        },
+        "H2_1": {
+          "bbox": [
+            2095,
+            850,
+            2446,
+            882
+          ],
+          "g_icon_name": "Checkmark in Square",
+          "g_brief": "Possibly selects an item",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "explore": false,
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H2",
+          "interactivity": {
+            "click_result": null,
+            "type": "unknown"
+          },
+          "status": "pending",
+          "crop_path": "crops/Favourites/H2_1_None_Checkmark_in_Square_root_favourites.png",
+          "autocaptioning": "done"
+        },
+        "H3_1": {
+          "bbox": [
+            2189,
+            21,
+            2254,
+            86
+          ],
+          "g_icon_name": "Edit Icon",
+          "g_brief": "Edit the item",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "explore": true,
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H3",
+          "interactivity": {
+            "click_result": null,
+            "type": "unknown"
+          },
+          "status": "pending",
+          "crop_path": "crops/Favourites/H3_1_None_Edit_Icon_root_favourites.png",
+          "autocaptioning": "done"
+        },
+        "H3_2": {
+          "bbox": [
+            2274,
+            22,
+            2335,
+            81
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "explore": true,
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H3",
+          "interactivity": {
+            "click_result": null,
+            "type": "unknown"
+          },
+          "status": "pending",
+          "crop_path": "crops/Favourites/H3_2_None_unanalyzed_root_favourites.png"
+        },
+        "H3_3": {
+          "bbox": [
+            2339,
+            22,
+            2418,
+            81
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "explore": true,
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H3",
+          "interactivity": {
+            "click_result": null,
+            "type": "unknown"
+          },
+          "status": "pending",
+          "crop_path": "crops/Favourites/H3_3_None_unanalyzed_root_favourites.png"
+        },
+        "H4_1": {
+          "bbox": [
+            2204,
+            29,
+            2399,
+            73
+          ],
+          "g_icon_name": "Edit, Grid, List",
+          "g_brief": "A combined group of icons for editing, grid view, and list view options",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "explore": true,
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H4",
+          "interactivity": {
+            "click_result": null,
+            "type": "unknown"
+          },
+          "status": "pending",
+          "crop_path": "crops/Favourites/H4_1_None_Edit,_Grid,_List_root_favourites.png",
+          "autocaptioning": "done"
+        }
+      },
+      "exit_strategies": {
+        "root": {
+          "method": "click_coordinates",
+          "coordinates": [
+            75,
+            35
+          ],
+          "learned_from": "automatic_discovery",
+          "success_rate": 1.0,
+          "last_used": 1750870437.9140632,
+          "discovery_method": "safe_area_click"
+        }
+      }
+    }
+  },
+  "edges": [
+    {
+      "from": "root",
+      "to": "root_favourites",
+      "action": "click:V0_3",
+      "element_name": "Favourites",
+      "navigation": "root → root_favourites",
+      "timestamp": "2025-06-25T22:23:51.446011"
+    }
+  ],
+  "last_updated": "2025-06-27T20:41:29.610606",
+  "total_states": 2,
+  "exploration_stats": {
+    "pending_nodes": 15,
+    "explored_nodes": 0,
+    "non_interactive_nodes": 11,
+    "total_nodes": 26
+  }
+}

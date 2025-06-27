@@ -1,0 +1,57 @@
+📋 COMMAND LEGEND:
+   🖥️  WINDOW COMMANDS:
+   • M            - Maximize window
+   • m            - Minimize window
+   • c            - Close window
+   • s            - Show current size & state
+   • l            - Show location on screen
+   • f            - Smart foreground (save→minimize→maximize→restore)
+   • i            - Deep introspection (like ShareX detection)
+   • resize W H   - Resize to width x height
+   • move X Y     - Move to absolute position
+   • screen S X Y - Move to position X,Y on screen S
+   • monitor N    - Move to monitor N (centered)
+   • tree         - Show complete UI hierarchy tree
+
+   🚀 APPLICATION LAUNCHER:
+   • launch APP_NAME SCREEN_ID - Launch app on specific screen (fullscreen)
+   • launch APP_NAME SCREEN_ID normal - Launch app on specific screen (normal)
+
+   🔍 INTROSPECTION COMMANDS:
+   • hover        - Analyze element under mouse cursor
+   • inspect      - Same as 'i' - full window analysis
+   • detect       - Real-time cursor element detection
+
+   🖱️  CURSOR & MOUSE COMMANDS:
+   • cursor       - Get current cursor position
+   • cursor X Y   - Set cursor position
+   • click [left|right|middle] [X Y] - Click at position or cursor
+   • doubleclick [left|right|middle] [X Y] - Double click
+   • longclick [left|right|middle] DURATION [X Y] - Long click (hold)
+   • scroll [up|down|left|right] [AMOUNT] [X Y] - Scroll
+   • drag X1 Y1 X2 Y2 [left|right|middle] [DURATION] - Drag
+
+   ⌨️  KEYBOARD & SYSTEM:
+   • msgbox TITLE TEXT [X Y] - Show message box
+   • computer     - Get computer name
+   • user         - Get user name
+   • keys         - Show virtual key codes
+   • send KEYS    - Send key combination (e.g., send ctrl+c)
+   • type TEXT    - Type text
+
+   ⚡ COMMAND CHAINING:
+   • Use ' : ' to chain multiple commands
+   • Commands execute in sequence with small delays
+   • Chain stops if any command fails
+
+   🔧 CONTROL:
+   • r            - Refresh window list
+   • q            - Quit
+
+   Examples:
+   • click 500 300 : send ctrl+v                    - Click then paste
+   • 1a2b3c4d f : click 100 100 : type hello       - Focus, click, type
+   • cursor 200 200 : click : send ctrl+c : send ctrl+v - Move, click, copy, paste
+   • 1a2b3c4d i                                     - Deep introspect window
+   • hover                                          - Analyze what's under cursor
+--------------------------------------------------

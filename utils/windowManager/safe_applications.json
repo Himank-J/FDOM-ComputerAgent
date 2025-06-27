@@ -1,0 +1,91 @@
+{
+  "applications": {
+    "notepad": "notepad.exe",
+    "calculator": "calc.exe",
+    "calc": "calc.exe",
+    "paint": "mspaint.exe",
+    "mspaint": "mspaint.exe",
+    "cmd": "cmd.exe",
+    "powershell": "powershell.exe",
+    "explorer": "explorer.exe",
+    "blender": "C:\\Program Files\\Blender Foundation\\Blender 4.2\\blender-launcher.exe",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "firefox": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+    "edge": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "word": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office16\\WINWORD.EXE"
+    ],
+    "excel": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\EXCEL.EXE"
+    ],
+    "powerpnt": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\POWERPNT.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office16\\POWERPNT.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office16\\POWERPNT.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office15\\POWERPNT.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office15\\POWERPNT.EXE"
+    ],
+    "powerpoint": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\POWERPNT.EXE"
+    ],
+    "outlook": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE"
+    ],
+    "code": "C:\\Users\\{USER}\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "vscode": "C:\\Users\\{USER}\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "winword": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office16\\WINWORD.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office16\\WINWORD.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office15\\WINWORD.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office15\\WINWORD.EXE"
+    ],
+    "msaccess": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\MSACCESS.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\MSACCESS.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office16\\MSACCESS.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office16\\MSACCESS.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office15\\MSACCESS.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office15\\MSACCESS.EXE"
+    ],
+    "access": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\MSACCESS.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\MSACCESS.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office16\\MSACCESS.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office16\\MSACCESS.EXE"
+    ],
+    "visio": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\VISIO.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\VISIO.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office16\\VISIO.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office16\\VISIO.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office15\\VISIO.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office15\\VISIO.EXE"
+    ],
+    "winproj": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office16\\WINPROJ.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office16\\WINPROJ.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office15\\WINPROJ.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office15\\WINPROJ.EXE"
+    ],
+    "project": [
+      "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\WINPROJ.EXE",
+      "C:\\Program Files\\Microsoft Office\\Office16\\WINPROJ.EXE",
+      "C:\\Program Files (x86)\\Microsoft Office\\Office16\\WINPROJ.EXE"
+    ]
+  },
+  "path_variables": {
+    "{USER}": "current_user"
+  }
+}
